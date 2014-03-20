@@ -1,0 +1,15 @@
+standard deviation: 标准差
+	离均差平方和的平均的方均根
+
+
+/*void matrix_mul_3X3(float m1[D][D], float m2[D][D], float res[D][D]){
+    int i,j,k;
+    for(i=0;i<D;i++){
+        for(j=0;j<D;j++){
+            res[i][j]=0;
+            for(k=0;k<D;k++){//k indicates column number
+                res[i][j]+=m1[i][k]*m2[k][j];
+            }
+        }
+    }
+}*/
