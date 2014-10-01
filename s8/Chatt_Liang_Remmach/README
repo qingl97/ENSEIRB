@@ -1,0 +1,29 @@
+   _____________________________________________
+  |					        |	
+  |	Projet BDD - Jeux-Videos 		|
+  |						|
+  |	Trinôme : mchatt - mremmach - qliang 	|
+  |_____________________________________________|
+
+
+Pour pouvoir utiliser notre projet, il faut commencer par créer une base de données MySQL.
+
+- Exécuter le fichier bdd/base.sql pour créer les tables
+
+- Exécuter le fichier bdd/donnees.sql pour remplir le base
+
+- Modifier le fichier site/PDOFactory.class.php pour connecter le site à la base
+
+- Placer le dossier site dans un serveur php 
+
+- Se connecter au site grâce aux identifiants suivant ( root : default )
+
+	si cela ne fonctionne pas, Effectuer chmod 755 * 
+
+_______________________________________________________________
+
+
+
+- Vous pouvez tester le site directement en vous connectant avec les mêmes identifiants sur
+
+		http://work-perso.zz.mu/site
