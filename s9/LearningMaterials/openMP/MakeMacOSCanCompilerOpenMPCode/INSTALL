@@ -1,0 +1,36 @@
+Solution for OpenMP compilation and running on Mac OS 
+
+1. The Mac OS default compiler Clang 
+The default compiler on Mac OS is clang, which supports only C, C++ and Objective-C. And the gcc and g++ command in Xcode suite is no longer the GCC frontend to LLVM which based on the very old GCC version of 4.2.1, but rather a symlink to clang and clang++. This could be seen from running the following command on Mac OS command line:
+
+$ gcc
+clang: error: no input files
+$ g++
+clang: error: no input files
+$ gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 6.0 (clang-600.0.51) (based on LLVM 3.5svn)
+Target: x86_64-apple-darwin13.3.0
+Thread model: posix
+$ g++ --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 6.0 (clang-600.0.51) (based on LLVM 3.5svn)
+Target: x86_64-apple-darwin13.3.0
+Thread model: posix
+
+To do the development using OpenMP on Mac OS, we need a OpenMP supported compiler and runtime support. However the default version of Clang on Mac OS doesn't support openMP. Luckly, the LLVM project provides an OpenMP-enabled clang compiler(see http://openmp.org/wp/openmp-compilers/) and the instructions for how to build it in our Mac OS.
+
+2. Build OpenMP-enabled Clang on Mac OS
+
+Instructions come from following sites:
+http://clang-omp.github.io/
+
+3. An alternative to set up OpenMP envrionment on Mac OS --- Installing GNU GCC
+
+Since OpenMP 3.1 is supported since GCC 4.7 (as mentioned above, the defaule clang on Mac functions for GCC 4.2.1), an easy and reasonnable alternative solution to set up OpenMP env on Mac is to just install the lastest GNU version GCC on Mac OS. If you are interested in a modern Fortran compiler, for e.g., you will need gfortran that comes with GCC. Another reason to have the latest stable version of GCC on you Mac is that it provides you with an alternative C and C++ compiler. Testing your code with two different compilers is always a good idea. 
+
+For detailed instructions, see the site 
+https://solarianprogrammer.com/2013/06/11/compiling-gcc-mac-os-x/ 
+
+
+
