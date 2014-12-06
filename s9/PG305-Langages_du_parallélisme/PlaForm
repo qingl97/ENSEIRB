@@ -1,6 +1,0 @@
-liste des modules disp:
-	%module av
-pour limiter la liste
-	export MODULEPATH=/opt/cluster/plafrim2/modulefiles
-pour 
-	load ou add
